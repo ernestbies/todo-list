@@ -1,0 +1,23 @@
+.slider-in {
+    animation: slide-in 1s ease-in-out forwards;
+}
+
+.slider-out {
+    animation: slide-out 1s ease-in-out forwards;
+}
+
+@keyframes slide-in {
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -100%;
+    }
+}
