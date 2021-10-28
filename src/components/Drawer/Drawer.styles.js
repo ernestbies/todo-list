@@ -51,9 +51,7 @@ export const CloseButton = styled.div`
 `;
 
 
-export const DrawerContent = styled.div`
-    height: 100%;
-`;
+export const DrawerContent = styled.div``;
 
 export const DrawerInfo = styled.p`
     position: absolute;

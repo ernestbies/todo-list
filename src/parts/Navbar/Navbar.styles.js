@@ -1,4 +1,13 @@
 import styled from 'styled-components';
+import Logo from "../../components/Logo/Logo";
+
+export const NavLogo = styled(Logo)`
+    margin-left: 15%;
+    
+    @media (max-width: 576px) {
+        margin: 0 auto;
+    }
+`;
 
 export const StyledNav = styled.nav`
     display: flex;
@@ -9,64 +18,6 @@ export const StyledNav = styled.nav`
     top: 0;
     border-bottom: 1px solid #111;
     z-index: 5;
-`;
-
-export const NavTitle = styled.p`
-    color: white;
-    font-family: Zen;
-    font-weight: 100;
-    font-size: 23px;
-    text-shadow: 2px 1px #111;
-`;
-
-export const NavSubtitle = styled.p`
-    color: white;
-    font-family: Caveat;
-    font-size: 14px;
-    margin: 0;
-    margin-left: 15px;
-`;
-
-export const LogoContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    width: 120px;
-    user-select: none;
-    margin-left: 20%;
-    
-    @media (max-width: 576px) {
-        margin: 0 auto;
-    }
-`;
-
-export const NavTitleContainer = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 30px;
-`;
-
-export const NavTitleStyled = styled.span`
-    font-weight: 700;
-    color: #DC143C;
-    text-shadow: 1px 2px #DC143C90;
-`;
-
-export const SubtitleStyled = styled.span`
-    color: #DC143C;
-`;
-
-export const NavBlock = styled.div`
-    width: 10px;
-    height: 10px;
-    background-color: #DC143C;
-    margin-right: 15px;
-    transform: rotate(45deg);
-    box-shadow: 1px 5px #DC143C90, 5px 1px #DC143C90;
-    margin-top: 3px;
 `;
 
 export const StyledNavLinkContainer = styled.ul`

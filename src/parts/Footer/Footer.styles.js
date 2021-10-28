@@ -9,6 +9,7 @@ export const StyledFooter = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 999;
 `;
 
 export const FooterText = styled.p`

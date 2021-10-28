@@ -1,31 +1,18 @@
 import React from "react";
 import {
-    LogoContainer,
-    NavBlock, NavSubtitle,
-    NavTitle,
-    NavTitleContainer,
-    NavTitleStyled,
-    StyledNav, StyledNavLink,
-    StyledNavLinkContainer, SubtitleStyled
+    NavLogo, StyledNav, StyledNavLink, StyledNavLinkContainer
 } from "./Navbar.styles";
 import HamburgerMenu from "../../components/HamburgerMenu/HamburgerMenu";
 
 const Navbar = () => {
     return (
         <StyledNav>
-            <LogoContainer>
-                <NavTitleContainer>
-                    <NavBlock/>
-                    <NavTitle>{'to'}<NavTitleStyled>{'DO'}</NavTitleStyled></NavTitle>
-                </NavTitleContainer>
-                <NavSubtitle>{'plan your '}<SubtitleStyled>{'future'}</SubtitleStyled></NavSubtitle>
-            </LogoContainer>
-
+            <NavLogo/>
             <StyledNavLinkContainer>
-                <StyledNavLink>{'Home'}</StyledNavLink>
-                <StyledNavLink>{'Contact'}</StyledNavLink>
+                <StyledNavLink>{'home'}</StyledNavLink>
+                <StyledNavLink>{'start'}</StyledNavLink>
+                <StyledNavLink>{'contact'}</StyledNavLink>
             </StyledNavLinkContainer>
-
             <HamburgerMenu/>
         </StyledNav>
     )
