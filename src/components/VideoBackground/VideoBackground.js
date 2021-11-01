@@ -18,8 +18,8 @@ const VideoBackground = () => {
             </VideoBg>
             <IntroContainer>
                 <IntroLogo/>
-                <PageQuote><ColoredText color={'#DC143C'}>{'//'}</ColoredText>{' organize your time'}</PageQuote>
-                <StartButton>{'start'}</StartButton>
+                <PageQuote><ColoredText>{'//'}</ColoredText>{' organize your time'}</PageQuote>
+                <StartButton to={'/todo-list'}>{'start'}</StartButton>
             </IntroContainer>
         </VideoContainer>
     );

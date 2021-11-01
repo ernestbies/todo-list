@@ -7,11 +7,11 @@ import HamburgerMenu from "../../components/HamburgerMenu/HamburgerMenu";
 const Navbar = () => {
     return (
         <StyledNav>
-            <NavLogo/>
+            <NavLogo href={'http://localhost:3000'} title={'toDO - plan your future // ernestbies.com'}/>
             <StyledNavLinkContainer>
-                <StyledNavLink>{'home'}</StyledNavLink>
-                <StyledNavLink>{'start'}</StyledNavLink>
-                <StyledNavLink>{'contact'}</StyledNavLink>
+                <StyledNavLink to={'/'} title={'home'}>{'home'}</StyledNavLink>
+                <StyledNavLink to={'/todo-list'} title={'start'}>{'start'}</StyledNavLink>
+                <StyledNavLink to={'/contact'} title={'contact'}>{'contact'}</StyledNavLink>
             </StyledNavLinkContainer>
             <HamburgerMenu/>
         </StyledNav>

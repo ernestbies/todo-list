@@ -1,4 +1,4 @@
-import styled, {keyframes} from 'styled-components';
+import styled, {css, keyframes} from 'styled-components';
 
 const growLeft = keyframes`
     from {
@@ -20,23 +20,35 @@ export const StyledItem = styled.div`
     justify-content: center;
     transform: scaleX(0);
     transform-origin: left;
-    animation: ${growLeft} cubic-bezier(0.785, 0.135, 0.15, 0.86) 1.5s forwards;
-    animation-delay: 0.4s;
+    margin: 40px;
+    
+    ${({animate}) => animate && css`
+        animation-delay: 0.8s;
+        animation: ${growLeft} cubic-bezier(0.785, 0.135, 0.15, 0.86) 1.5s forwards;
+    `}
 `;
 
 export const FaqText = styled.p`
     color: black;
-    font-family: Zen;
-    font-size: 18px;
+    font-family: ${({theme}) => theme.fontSecondary.family};
+    font-size: ${({theme}) => theme.fontSecondary.size.xl};
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: bold;
+     
+    ${({ theme }) => theme.mediaBreakpoints.md} {
+        font-size: ${({theme}) => theme.fontSecondary.size.lg};
+    }
 `;
 
 export const FaqSubtext = styled.p`
     color: black;
-    font-family: Zen;
-    font-size: 16px;  
+    font-family: ${({theme}) => theme.fontSecondary.family};
+    font-size: ${({theme}) => theme.fontSecondary.size.lg}; 
     margin: 0;
+        
+    ${({ theme }) => theme.mediaBreakpoints.md} {
+        font-size: ${({theme}) => theme.fontSecondary.size.md};
+    }
 `;
 

@@ -1,14 +1,14 @@
 import React from "react";
-import Page from "../../components/Page/Page";
 import VideoBackground from "../../components/VideoBackground/VideoBackground";
 import About from "../../components/About/About";
+import Layout from "../../components/Layout/Layout";
 
 const Home = () => {
     return (
-        <Page>
+        <Layout title={'Home'}>
             <VideoBackground/>
             <About/>
-        </Page>
+        </Layout>
     );
 };
 

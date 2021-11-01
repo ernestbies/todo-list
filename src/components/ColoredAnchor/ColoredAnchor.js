@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const ColoredAnchor = styled.a`
-    color: ${({color}) => color ?? '#DC143C'};
-    background-image: linear-gradient(#DC143C, #DC143C);
+    color: ${(props) => props.color ?? props.theme.colors.primary};
+    background-image: ${({theme}) => theme.colors.mainColorGradient};
     background-position: 0 100%; 
     background-size: 0% 1px;
     background-repeat: no-repeat;

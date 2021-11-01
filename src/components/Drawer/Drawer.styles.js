@@ -12,7 +12,7 @@ export const StyledDrawer = styled.div`
 export const DrawerTop = styled.div`
     height: 70px;
     width: 100%;
-    background-image: linear-gradient(45deg, #000000 25%, #292929 25%, #292929 50%, #000000 50%, #000000 75%, #292929 75%, #292929 100%);
+    background-image: ${({theme}) => theme.colors.drawerGradient};
     background-size: 10px 10px;
     position: relative;
 `;
@@ -59,8 +59,8 @@ export const DrawerInfo = styled.p`
     left: 50%;
     transform: translateX(-50%);
     color: white;    
-    font-family: Roboto;
-    font-size: 10px;
+    font-family: ${({theme}) => theme.fontPrimary.family};
+    font-size: ${({theme}) => theme.fontPrimary.size.sm};
     white-space: pre-wrap;
     text-align: center;
 `;
@@ -106,25 +106,25 @@ export const SpecialLinkContainer = styled.div`
 `;
 
 export const LinkText = styled.p`
-    font-family: Roboto;
+    font-family: ${({theme}) => theme.fontPrimary.family};
+    font-size: ${({theme}) => theme.fontPrimary.size.lg};
     color: white;
-    font-size: 15px;
     margin-left: 15px;
 `;
 
 export const SpecialLinkText = styled.p`
-    font-family: Roboto;
+    font-family: ${({theme}) => theme.fontPrimary.family};
+    font-size: ${({theme}) => theme.fontPrimary.size.lg};
+    font-weight: ${({theme}) => theme.fontPrimary.weight.bold};
     color: white;
-    font-size: 15px;
-    font-weight: bold;
     margin-left: 15px;
     margin-bottom: 5px;
 `;
 
 export const SpecialLinkSubtext = styled.p`
-    font-family: Roboto;
+    font-family: ${({theme}) => theme.fontPrimary.family};
+    font-size: ${({theme}) => theme.fontPrimary.size.sm};
     color: white;
-    font-size: 11px;
     font-weight: 300;
     margin-top: 0;
     margin-left: 15px;

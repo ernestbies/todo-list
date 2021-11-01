@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import Logo from "../../components/Logo/Logo";
+import {Link} from "react-router-dom";
 
 export const NavLogo = styled(Logo)`
     margin-left: 15%;
     
-    @media (max-width: 576px) {
+    ${({ theme }) => theme.mediaBreakpoints.lg} {
         margin: 0 auto;
     }
 `;
@@ -20,7 +21,7 @@ export const StyledNav = styled.nav`
     z-index: 5;
 `;
 
-export const StyledNavLinkContainer = styled.ul`
+export const StyledNavLinkContainer = styled.div`
     height: 100%;
     display: flex;
     align-items: center;
@@ -29,19 +30,19 @@ export const StyledNavLinkContainer = styled.ul`
     margin-left: auto; 
     margin-right: 10%;
     
-    @media (max-width: 576px) {
+    ${({ theme }) => theme.mediaBreakpoints.lg} {
         display: none;
     }
 `;
 
-export const StyledNavLink = styled.li`
+export const StyledNavLink = styled(Link)`
+    font-family: ${({theme}) => theme.fontSecondary.family};
+    font-size: ${({theme}) => theme.fontSecondary.size.md};
+    font-weight: ${({theme}) => theme.fontSecondary.weight.regular};
     text-align: center;
     margin: 0;
     text-transform: uppercase;
-    font-family: Zen;
-    font-weight: 400;
     letter-spacing: 4px;
-    font-size: 14px;
     color white;
     cursor: pointer;
     margin-left: 50px; 

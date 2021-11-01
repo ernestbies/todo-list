@@ -9,14 +9,14 @@ import {
 } from "./Logo.styles";
 import ColoredText from "../ColoredText/ColoredText";
 
-const Logo = ({className}) => {
+const Logo = ({href, title, className}) => {
     return (
-        <LogoContainer className={className}>
+        <LogoContainer href={href} as={href ? 'a' : 'div'} title={title} className={className}>
             <LogoImgContainer>
                 <StyledLogo/>
                 <LogoTitle>{'to'}<LogoTitleStyled>{'DO'}</LogoTitleStyled></LogoTitle>
             </LogoImgContainer>
-            <LogoSubtitle>{'plan your '}<ColoredText color={'#DC143C'}>{'future'}</ColoredText></LogoSubtitle>
+            <LogoSubtitle>{'plan your '}<ColoredText>{'future'}</ColoredText></LogoSubtitle>
         </LogoContainer>
     )
 };
