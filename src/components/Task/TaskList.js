@@ -1,33 +1,48 @@
 import TaskItem from "./TaskItem";
 import React from "react";
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
+import {connect} from "react-redux";
+
+const fadeInRight = keyframes`
+    from {
+        opacity: 0;
+        transform: translateX(-25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+`;
 
 const StyledList = styled.div`
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin: 50px 30px 80px 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    animation: ${fadeInRight} 3s ease-in-out;
 `;
 
-const TaskList = () => {
-    return (<StyledList>
-        <TaskItem/>
-        <TaskItem/>
-        <TaskItem/>
-        <TaskItem/>
-        <TaskItem/>
-        <TaskItem/>
-        <TaskItem/>
-        <TaskItem/>
-        <TaskItem/>
-        <TaskItem/>
-        <TaskItem/>
-        <TaskItem/>
-        <TaskItem/>
-        <TaskItem/>
-    </StyledList>)
+const InfoText = styled.p`
+    font-family: ${({theme}) => theme.fontSecondary.family};
+    font-size: ${({theme}) => theme.fontSecondary.size.xl};
+    text-align: center;
+`;
+
+const TaskList = ({todos}) => {
+
+    return (
+        <StyledList>
+            {
+                todos.length ?
+                    todos.map(e => <TaskItem key={e.id} id={e.id} text={e.text} date={e.date}/>)
+                    :
+                    <InfoText>{'Your list is empty. You have no work to do.'}</InfoText>
+            }
+        </StyledList>
+    );
 };
 
-export default TaskList;
+const mapStateToProps = ({todoReducer}) => (todoReducer);
+
+export default connect(mapStateToProps, null)(TaskList);

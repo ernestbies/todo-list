@@ -10,7 +10,6 @@ const fade = keyframes`
     }
 `;
 
-
 export const RedirectButton = styled(Link)`
    font-family: ${({theme}) => theme.fontSecondary.family};
    font-size: ${({theme}) => theme.fontPrimary.size.md};

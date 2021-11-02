@@ -4,6 +4,7 @@ import {ToDoContainer, ToDoTitle} from "./ToDo.styles";
 import ColoredText from "../../components/ColoredText/ColoredText";
 import TaskAdd from "../../components/Task/TaskAdd";
 import TaskList from "../../components/Task/TaskList";
+import SectionTag from "../../components/SectionTag/SectionTag";
 
 const ToDo = () => {
     return (
@@ -17,6 +18,10 @@ const ToDo = () => {
                 <TaskAdd/>
                 <TaskList/>
             </ToDoContainer>
+            <SectionTag animate={true}>
+                <ColoredText fontWeight={'bold'}>{'#LIST //'}</ColoredText>
+                {'toDO - plan your future'}
+            </SectionTag>
         </Layout>
     );
 };

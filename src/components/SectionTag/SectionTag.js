@@ -44,6 +44,11 @@ const SectionTag = styled.div`
     &:not(:empty)::after {
         margin-left: .25em;
     }
+    
+    ${({ theme }) => theme.mediaBreakpoints.sm} {
+        display: none;
+    }
+    
 `;
 
 export default SectionTag;

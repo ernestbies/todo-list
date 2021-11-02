@@ -18,7 +18,7 @@ const FaqItem = ({animate, type}) => {
                     />
                     <FaqText>{'add task'}</FaqText>
                     <FaqSubtext>{'Add a new task by proceeding to the '}<ColoredAnchor
-                        href={'/'}>{'START'}</ColoredAnchor>{' tab.'}</FaqSubtext>
+                        href={'/todo-list'}>{'START'}</ColoredAnchor>{' tab.'}</FaqSubtext>
                 </>
             }
             {

@@ -4,14 +4,17 @@ import Datetime from 'react-datetime';
 import "react-datetime/css/react-datetime.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCalendarAlt, faCheckCircle} from "@fortawesome/free-solid-svg-icons";
+import {connect} from "react-redux";
+import {addTodo} from "../../actions/todoActions";
 
 const TaskAddContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
     height: 35px;
-    width: 500px;
-    margin-top: 30px;
+    margin: 30px;
+    max-width: 500px;
+    width: 90%;
 `;
 
 const TaskAddInput = styled.input`
@@ -23,6 +26,7 @@ const TaskAddInput = styled.input`
     flex: 6;
     background-color: transparent;
     border: 2px solid ${({theme}) => theme.colors.primary};
+    width: 100%;
     
     &:focus {
         outline: none !important;
@@ -41,6 +45,7 @@ const TaskAddButton = styled.button`
     cursor: pointer;
     border-radius: 0 5px 5px 0;
     transition: opacity 1s ease-in-out;
+    min-width: 50px;
     
     ${TaskAddInput}:focus + & {
         box-shadow: 0 -1px 2px ${({theme}) => theme.colors.primary},
@@ -62,6 +67,11 @@ const DateTimeInput = styled.div`
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    
+    ${TaskAddInput}:focus + & {
+        box-shadow: 0 -1px 2px ${({theme}) => theme.colors.primary},
+                    0 1px 2px ${({theme}) => theme.colors.primary};
+    }
 `;
 
 const renderInput = (props, openCalendar, date) => {
@@ -81,18 +91,27 @@ const renderInput = (props, openCalendar, date) => {
     );
 }
 
-const TaskAdd = () => {
+const TaskAdd = ({addTodo}) => {
 
-    const [date, setDate] = useState("");
-    const [todo, setTodo] = useState("");
+    const [date, setDate] = useState('');
+    const [todo, setTodo] = useState('');
 
+    const addTodoToList = () => {
+        addTodo({text: todo, date: date});
+        setTodo('');
+        setDate('');
+    };
 
     return (<TaskAddContainer>
         <Datetime value={date} renderInput={(props, openCalendar) => renderInput(props, openCalendar, date)}
                   onChange={({_d}) => setDate(_d.getTime())}/>
         <TaskAddInput value={todo} placeholder={'Add a todo'} onChange={(e) => setTodo(e.target.value)}/>
-        <TaskAddButton disabled={!date || !todo}>{'Add Todo'}</TaskAddButton>
+        <TaskAddButton onClick={addTodoToList} disabled={!date || !todo}>{'Add'}</TaskAddButton>
     </TaskAddContainer>);
 };
 
-export default TaskAdd;
+
+const mapStateToProps = ({todoReducer}) => (todoReducer);
+const mapDispatchToProps = {addTodo};
+
+export default connect(mapStateToProps, mapDispatchToProps)(TaskAdd);
