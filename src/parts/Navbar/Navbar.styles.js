@@ -26,7 +26,6 @@ export const StyledNavLinkContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    list-style-type: none;
     margin-left: auto; 
     margin-right: 10%;
     
@@ -43,7 +42,7 @@ export const StyledNavLink = styled(Link)`
     margin: 0;
     text-transform: uppercase;
     letter-spacing: 4px;
-    color white;
+    color: white;
     cursor: pointer;
     margin-left: 50px; 
     margin-right: 50px;
