@@ -35,4 +35,8 @@ export const EmailAddress = styled.span`
         background-position: 100% 100%;
         background-size: 100% 1px;
     }
+    
+    ${({ theme }) => theme.mediaBreakpoints.sm} {
+        font-size: 22px;
+    } 
 `;

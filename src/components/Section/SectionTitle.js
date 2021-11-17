@@ -6,6 +6,11 @@ const SectionTitle = styled.p`
     font-weight: ${({theme}) => theme.fontPrimary.weight.light};
     color: black;
     letter-spacing: 2px;
+    width: 80%;
+    
+    ${({ theme }) => theme.mediaBreakpoints.sm} {
+        font-size: 30px;
+    } 
 `;
 
 export default SectionTitle;

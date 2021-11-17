@@ -20,9 +20,10 @@ const SectionText = styled.p`
     animation-delay: 0.5s;
     animation: ${fade} 3s ease forwards;
     margin-top: 45px;
-    white-space: pre;
+    white-space: pre-wrap;
     line-height: 1.7;
     margin-bottom: 50px;
+    width: 80%;
     
     ${({ theme }) => theme.mediaBreakpoints.sm} {
         font-size: ${({theme}) => theme.fontSecondary.size.lg};

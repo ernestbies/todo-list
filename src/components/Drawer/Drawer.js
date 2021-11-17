@@ -26,7 +26,7 @@ const Drawer = ({drawerIsOpen, manageDrawer}) => {
             <CloseButton onClick={() => manageDrawer(false)} title={'Close navigation drawer'}/>
         </DrawerTop>
         <DrawerContent>
-            <StyledLink style={{marginTop: 15}}>
+            <StyledLink to={'/'} onClick={() => manageDrawer(false)} style={{marginTop: 15}}>
                 <FontAwesomeIcon
                     icon={faHome}
                     color={'grey'}
@@ -34,7 +34,7 @@ const Drawer = ({drawerIsOpen, manageDrawer}) => {
                 />
                 <LinkText>{'Home'}</LinkText>
             </StyledLink>
-            <StyledLink>
+            <StyledLink to={'/todo-list'} onClick={() => manageDrawer(false)}>
                 <FontAwesomeIcon
                     icon={faClipboardList}
                     color={'grey'}
@@ -42,7 +42,7 @@ const Drawer = ({drawerIsOpen, manageDrawer}) => {
                 />
                 <LinkText>{'Start'}</LinkText>
             </StyledLink>
-            <StyledLink>
+            <StyledLink to={'/contact'} onClick={() => manageDrawer(false)}>
                 <FontAwesomeIcon
                     icon={faEnvelope}
                     color={'grey'}

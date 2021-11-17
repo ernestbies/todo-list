@@ -1,11 +1,12 @@
 import styled  from 'styled-components';
+import {Link} from "react-router-dom";
 
 export const StyledDrawer = styled.div`
     background-color: #111;
     width: 65%;
     height: 100%;
     z-index: 999;
-    position: absolute;
+    position: fixed;
     left: -65%;
 `;
 
@@ -65,7 +66,7 @@ export const DrawerInfo = styled.p`
     text-align: center;
 `;
 
-export const StyledLink = styled.div`
+export const StyledLink = styled(Link)`
     width: 100%;
     height: 50px;
     cursor: pointer;
