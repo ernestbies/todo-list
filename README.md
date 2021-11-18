@@ -1,4 +1,4 @@
-# Restaurant Management System (RMS)
+# toDo - plan your future
 To-Do application that allows users to manage tasks to be performed.
 
 # Screenshots
