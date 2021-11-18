@@ -2,12 +2,12 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 
 const SEO = ({title}) => (
-    <Helmet title = {title + ' | TODO App ernestbies.com'}
+    <Helmet title = {title + ' | toDo - plan your future'}
             htmlAttributes={{ lang: 'en' }}
             meta={[
                 {
                     name: `description`,
-                    content: 'ToDo Application created by ernestbies.com',
+                    content: 'ToDo Application created by Ernest Bieś',
                 }
             ]}
     />

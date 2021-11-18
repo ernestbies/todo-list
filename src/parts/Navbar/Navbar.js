@@ -7,7 +7,7 @@ import HamburgerMenu from "../../components/HamburgerMenu/HamburgerMenu";
 const Navbar = () => {
     return (
         <StyledNav>
-            <NavLogo href={'https://todo-ernestbies.netlify.app'} title={'toDO - plan your future // ernestbies.com'}/>
+            <NavLogo href={'https://todo-ernestbies.netlify.app'} title={'toDO - plan your future'}/>
             <StyledNavLinkContainer>
                 <StyledNavLink to={'/'} title={'home'}>{'home'}</StyledNavLink>
                 <StyledNavLink to={'/todo-list'} title={'start'}>{'start'}</StyledNavLink>

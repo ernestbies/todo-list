@@ -31,11 +31,22 @@ const InfoText = styled.p`
 
 const TaskList = ({todos}) => {
 
+    const sortByProperty = (property) => {
+        return function(a,b) {
+            if(a[property] > b[property])
+                return -1;
+            else if(a[property] < b[property])
+                return 1;
+
+            return 0;
+        }
+    }
+
     return (
         <StyledList>
             {
                 todos.length ?
-                    todos.map(e => <TaskItem key={e.id} id={e.id} text={e.text} date={e.date}/>)
+                    todos.sort(sortByProperty('date')).map(e => <TaskItem key={e.id} id={e.id} text={e.text} date={e.date}/>)
                     :
                     <InfoText>{'Your list is empty. You have no work to do.'}</InfoText>
             }
