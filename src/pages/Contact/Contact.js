@@ -21,7 +21,7 @@ const Contact = () => {
                     <ColoredText>{' ?'}</ColoredText>
                 </SectionTitle>
                 <SectionText>{'Feel free to contact with me via e-mail. I will respond ASAP.\nAlso visit my '}
-                    <ColoredAnchor href={'https://ernestbies.netlify.app'}>{'official website'}</ColoredAnchor>
+                    <ColoredAnchor href={'https://ernestbies.com'}>{'official website'}</ColoredAnchor>
                     {' to check my other projects.'}
                 </SectionText>
                 <EmailContainer href={'mailto:ernestbies@gmail.com'}>

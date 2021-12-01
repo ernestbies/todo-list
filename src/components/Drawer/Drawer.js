@@ -50,9 +50,9 @@ const Drawer = ({drawerIsOpen, manageDrawer}) => {
                 />
                 <LinkText>{'Contact'}</LinkText>
             </StyledLink>
-            <SpecialStyledLink href={'https://ernestbies.netlify.app'} target={'_blank'}>
+            <SpecialStyledLink href={'https://ernestbies.com'} target={'_blank'}>
                 <SpecialLinkContainer>
-                    <SpecialLinkText>{'ERNEST BIEŚ'}</SpecialLinkText>
+                    <SpecialLinkText>{'ernestbies.com'}</SpecialLinkText>
                     <SpecialLinkSubtext>{'Visit my official website for more projects.'}</SpecialLinkSubtext>
                 </SpecialLinkContainer>
                 <ExternalLinkContainer>
