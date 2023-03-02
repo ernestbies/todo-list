@@ -1,37 +1,5 @@
-@font-face {
-  font-family: 'Roboto';
-  font-weight: 100;
-  font-style: normal;
-  src: url("./assets/fonts/Roboto-Thin.ttf") format('truetype');
-}
-
-@font-face {
-  font-family: 'Roboto';
-  font-weight: 300;
-  font-style: normal;
-  src: url("./assets/fonts/Roboto-Light.ttf") format('truetype');
-}
-
-@font-face {
-  font-family: 'Roboto';
-  font-weight: 400;
-  font-style: normal;
-  src: url("./assets/fonts/Roboto-Regular.ttf") format('truetype');
-}
-
-@font-face {
-  font-family: 'Roboto';
-  font-weight: 500;
-  font-style: normal;
-  src: url("./assets/fonts/Roboto-Medium.ttf") format('truetype');
-}
-
-@font-face {
-  font-family: 'Roboto';
-  font-weight: 700;
-  font-style: normal;
-  src: url("./assets/fonts/Roboto-Bold.ttf") format('truetype');
-}
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Caveat:400');
 
 @font-face {
   font-family: 'Zen';
@@ -59,11 +27,4 @@
   font-weight: 700;
   font-style: normal;
   src: url("./assets/fonts/Zen-Bold.ttf") format('truetype');
-}
-
-@font-face {
-  font-family: 'Caveat';
-  font-weight: 400;
-  font-style: normal;
-  src: url("./assets/fonts/Caveat-Regular.ttf") format('truetype');
 }
